@@ -1,0 +1,99 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/essential"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue",
+        "html"
+    ],
+    "rules": {
+        // 函数声明括号前要有空格
+        "space-before-function-paren": [
+            "error",
+            "always"
+        ],
+        // 函数调用括号前没有空格
+        "func-call-spacing": [
+            "error",
+            "never"
+        ],
+        // 行尾没有逗号
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        // 强制缩进为4
+        "indent": [
+            "error",
+            4
+        ],
+        // 操作符位于变量之前 
+        "operator-linebreak": [
+            "error",
+            "before"
+        ],
+        // 逗号前不能有空格，逗号后有一个或多个空格
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        // 行尾无分号
+        "semi": [
+            "error",
+            "never"
+        ],
+        // 强制使用单引号
+        "quotes": [
+            "error",
+            "single"
+        ],
+        // 属性前无空白
+        "no-whitespace-before-property": "error",
+        // 块结构前有空格
+        "space-before-blocks": [
+            "error",
+            "always"
+        ],
+        "vue/script-indent": [
+            "error",
+            4,
+            {
+                "baseIndent": 1,
+                "switchCase": 0,
+                "ignores": []
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.vue"
+            ],
+            "rules": {
+                "indent": "off"
+            }
+        }
+    ]
+}
